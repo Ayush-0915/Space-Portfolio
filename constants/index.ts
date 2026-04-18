@@ -1,90 +1,88 @@
-import { FaYoutube, FaFacebook } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 import {
-  RxDiscordLogo,
   RxGithubLogo,
   RxInstagramLogo,
-  RxTwitterLogo,
   RxLinkedinLogo,
 } from "react-icons/rx";
 
 export const SKILL_DATA = [
   {
-    skill_name: "HTML",
-    image: "html.png",
+    skill_name: "Python",
+    image: "python.svg",
     width: 80,
     height: 80,
   },
   {
-    skill_name: "CSS",
-    image: "css.png",
+    skill_name: "TensorFlow",
+    image: "tensorflow.svg",
     width: 80,
     height: 80,
   },
   {
-    skill_name: "JavaScript",
-    image: "js.png",
-    width: 65,
-    height: 65,
-  },
-  {
-    skill_name: "Tailwind CSS",
-    image: "tailwind.png",
+    skill_name: "PyTorch",
+    image: "pytorch.svg",
     width: 80,
     height: 80,
   },
   {
-    skill_name: "React",
-    image: "react.png",
+    skill_name: "Scikit-learn",
+    image: "scikitlearn.svg",
     width: 80,
     height: 80,
   },
   {
-    skill_name: "Redux",
-    image: "redux.png",
+    skill_name: "Pandas",
+    image: "pandas.svg",
     width: 80,
     height: 80,
   },
   {
-    skill_name: "React Query",
-    image: "reactquery.png",
+    skill_name: "NumPy",
+    image: "numpy.svg",
     width: 80,
     height: 80,
   },
   {
-    skill_name: "TypeScript",
-    image: "ts.png",
+    skill_name: "OpenCV",
+    image: "opencv.svg",
     width: 80,
     height: 80,
   },
   {
-    skill_name: "Next.js 14",
-    image: "next.png",
+    skill_name: "Jupyter",
+    image: "jupyter.svg",
     width: 80,
     height: 80,
   },
   {
-    skill_name: "Framer Motion",
-    image: "framer.png",
+    skill_name: "Hugging Face",
+    image: "huggingface.svg",
     width: 80,
     height: 80,
   },
   {
-    skill_name: "Stripe",
-    image: "stripe.png",
+    skill_name: "OpenAI",
+    image: "openai.svg",
     width: 80,
     height: 80,
   },
   {
-    skill_name: "Node.js",
-    image: "node.png",
+    skill_name: "LangChain",
+    image: "langchain.svg",
     width: 80,
     height: 80,
   },
   {
-    skill_name: "MongoDB",
-    image: "mongodb.png",
-    width: 40,
-    height: 40,
+    skill_name: "Keras",
+    image: "keras.svg",
+    width: 80,
+    height: 80,
+  },
+  {
+    skill_name: "MLflow",
+    image: "mlflow.svg",
+    width: 80,
+    height: 80,
   },
 ] as const;
 
@@ -92,78 +90,83 @@ export const SOCIALS = [
   {
     name: "Instagram",
     icon: RxInstagramLogo,
-    link: "https://instagram.com",
+    link: "https://www.instagram.com/ayush_xo._/",
   },
   {
-    name: "Facebook",
-    icon: FaFacebook,
-    link: "https://facebook.com",
+    name: "WhatsApp",
+    icon: FaWhatsapp,
+    link: "https://wa.me/919589981849?text=Hi%20Ayush%2C%20I%20visited%20your%20portfolio%20and%20want%20to%20connect.",
   },
   {
-    name: "Twitter",
-    icon: RxTwitterLogo,
-    link: "https://x.com/_sanidhyy",
+    name: "Linkedin",
+    icon: RxLinkedinLogo,
+    link: "https://www.linkedin.com/in/ayush-singh-0915ap",
+  },
+  {
+    name: "GitHub",
+    icon: RxGithubLogo,
+    link: "https://github.com/Ayush-0915",
   },
 ] as const;
 
 export const FRONTEND_SKILL = [
   {
-    skill_name: "HTML",
-    image: "html.png",
+    skill_name: "Matplotlib",
+    image: "matplotlib.svg",
     width: 80,
     height: 80,
   },
   {
-    skill_name: "CSS",
-    image: "css.png",
+    skill_name: "Seaborn",
+    image: "seaborn.svg",
     width: 80,
     height: 80,
   },
   {
-    skill_name: "JavaScript",
-    image: "js.png",
-    width: 65,
-    height: 65,
-  },
-  {
-    skill_name: "Tailwind CSS",
-    image: "tailwind.png",
+    skill_name: "Plotly",
+    image: "plotly.svg",
     width: 80,
     height: 80,
   },
   {
-    skill_name: "Material UI",
-    image: "mui.png",
+    skill_name: "Streamlit",
+    image: "streamlit.svg",
     width: 80,
     height: 80,
   },
   {
-    skill_name: "React",
-    image: "react.png",
+    skill_name: "FastAPI",
+    image: "fastapi.svg",
     width: 80,
     height: 80,
   },
   {
-    skill_name: "Redux",
-    image: "redux.png",
+    skill_name: "Gradio",
+    image: "gradio.svg",
     width: 80,
     height: 80,
   },
   {
-    skill_name: "React Query",
-    image: "reactquery.png",
+    skill_name: "Weights & Biases",
+    image: "wandb.svg",
     width: 80,
     height: 80,
   },
   {
-    skill_name: "TypeScript",
-    image: "ts.png",
+    skill_name: "Kaggle",
+    image: "kaggle.svg",
     width: 80,
     height: 80,
   },
   {
-    skill_name: "Next.js 14",
-    image: "next.png",
+    skill_name: "Apache Spark",
+    image: "spark.svg",
+    width: 80,
+    height: 80,
+  },
+  {
+    skill_name: "DuckDB",
+    image: "duckdb.svg",
     width: 80,
     height: 80,
   },
@@ -171,50 +174,32 @@ export const FRONTEND_SKILL = [
 
 export const BACKEND_SKILL = [
   {
-    skill_name: "Node.js",
-    image: "node.png",
+    skill_name: "Docker",
+    image: "docker.svg",
     width: 80,
     height: 80,
   },
   {
-    skill_name: "Express.js",
-    image: "express.png",
+    skill_name: "Kubernetes",
+    image: "kubernetes.svg",
+    width: 80,
+    height: 80,
+  },
+  {
+    skill_name: "GitHub Actions",
+    image: "githubactions.svg",
+    width: 80,
+    height: 80,
+  },
+  {
+    skill_name: "Apache Airflow",
+    image: "airflow.svg",
     width: 80,
     height: 80,
   },
   {
     skill_name: "MongoDB",
-    image: "mongodb.png",
-    width: 40,
-    height: 40,
-  },
-  {
-    skill_name: "Firebase",
-    image: "firebase.png",
-    width: 55,
-    height: 55,
-  },
-  {
-    skill_name: "PostgreSQL",
-    image: "postgresql.png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "MySQL",
-    image: "mysql.png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Prisma",
-    image: "prisma.png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Graphql",
-    image: "graphql.png",
+    image: "mongodb.svg",
     width: 80,
     height: 80,
   },
@@ -222,62 +207,89 @@ export const BACKEND_SKILL = [
 
 export const FULLSTACK_SKILL = [
   {
-    skill_name: "React Native",
-    image: "reactnative.png",
-    width: 70,
-    height: 70,
+    skill_name: "AWS",
+    image: "aws.svg",
+    width: 80,
+    height: 80,
   },
   {
-    skill_name: "Tauri",
-    image: "tauri.png",
-    width: 70,
-    height: 70,
+    skill_name: "Google Cloud",
+    image: "gcp.svg",
+    width: 80,
+    height: 80,
   },
   {
-    skill_name: "Docker",
-    image: "docker.png",
-    width: 70,
-    height: 70,
+    skill_name: "Mac",
+    image: "apple.svg",
+    width: 80,
+    height: 80,
+  },
+  {
+    skill_name: "Windows",
+    image: "windows.svg",
+    width: 80,
+    height: 80,
   },
 
   {
-    skill_name: "Figma",
-    image: "figma.png",
-    width: 50,
-    height: 50,
+    skill_name: "Git",
+    image: "git.svg",
+    width: 80,
+    height: 80,
   },
 ] as const;
 
 export const OTHER_SKILL = [
   {
-    skill_name: "Go",
-    image: "go.png",
-    width: 60,
-    height: 60,
+    skill_name: "Prompt Engineering",
+    image: "prompt.svg",
+    width: 80,
+    height: 80,
   },
 ] as const;
 
 export const PROJECTS = [
   {
-    title: "Modern Next.js 14 Portfolio",
+    title: "Uber Trip Insights Dashboard",
     description:
-      'Embark on a journey through my professional evolution with the "Modern Next.js Portfolio" - a dynamic showcase of my skills, experiences, and passion for web development. Crafted with precision and powered by Next.js, this portfolio is more than just a static display; it\'s an immersive experience that reflects the cutting edge of modern web technologies.',
-    image: "/projects/project-1.png",
-    link: "https://example.com",
+      "An interactive Uber analytics dashboard built with Python and Power BI to track trip demand, peak hours, fare patterns, and location-wise ride performance for smarter operational decisions.",
+    image: "/projects/uber.jpg",
+    link: "https://github.com/Ayush-0915/Uber-Data-Analysis",
   },
   {
-    title: "Interactive Cards Portfolio",
+    title: "Netflix Data Analysis Dashboard",
     description:
-      'Step into the extraordinary world of my professional journey through the "Interactive Cards Portfolio" - an innovative and visually captivating platform that redefines the traditional portfolio experience. Ditching the conventional static layout, this portfolio leverages interactive cards to showcase my skills, projects, and personality in an engaging and dynamic manner.',
-    image: "/projects/project-2.png",
-    link: "https://example.com",
+      "An interactive Netflix analytics dashboard built with Python and Power BI to uncover trends in content types, genres, release patterns, and country-wise distribution.",
+    image: "/projects/netflix-dashboard-v2.png",
+    link: "https://github.com/Ayush-0915/Netflix-Data-Analysis",
   },
   {
-    title: "Space Themed Website",
+    title: "Car Evaluation Dashboard",
     description:
-      'Embark on an interstellar journey with my "Space Themed Website", a mesmerizing space-themed website that invites you to explore the cosmic wonders beyond our world. Immerse yourself in an awe-inspiring digital experience that blends cutting-edge design with the mysteries of the universe.',
-    image: "/projects/project-3.png",
-    link: "https://example.com",
+      "A machine learning dashboard that predicts car acceptability using a Decision Tree model and visualizes key factors like safety, cost, doors, and seating in Power BI.",
+    image: "/projects/car-evaluation.png",
+    link: "https://github.com/Ayush-0915/Car-evaluation",
+  },
+  {
+    title: "Shifra Virtual Assistant",
+    description:
+      "An AI-powered virtual assistant interface focused on natural interaction, fast response handling, and smart task support. Shifra is designed to deliver a futuristic conversational experience with a clean, immersive visual identity.",
+    image: "/projects/shifra.jpg",
+    link: "https://github.com/Ayush-0915/Shifra-2.O",
+  },
+  {
+    title: "Personal 3D Portfolio",
+    description:
+      "A visually immersive 3D personal portfolio featuring smooth animations, interactive sections, and a modern UI to highlight my profile, projects, and skills through a live web experience.",
+    image: "/projects/personal-3d-v2.png",
+    link: "https://ayush-0915.github.io/Personal-3D-Portfolio/",
+  },
+  {
+    title: "Tips Data Analysis",
+    description:
+      "An end-to-end exploratory data analysis project on restaurant tipping behavior, uncovering patterns across total bill, party size, time, and service context to derive practical business insights.",
+    image: "/projects/tips-data-analysis.jpg",
+    link: "https://github.com/Ayush-0915/Tips-Data-Analysis",
   },
 ] as const;
 
@@ -286,19 +298,9 @@ export const FOOTER_DATA = [
     title: "Community",
     data: [
       {
-        name: "YouTube",
-        icon: FaYoutube,
-        link: "https://youtube.com",
-      },
-      {
         name: "GitHub",
         icon: RxGithubLogo,
-        link: "https://github.com",
-      },
-      {
-        name: "Discord",
-        icon: RxDiscordLogo,
-        link: "https://discord.com",
+        link: "https://github.com/Ayush-0915",
       },
     ],
   },
@@ -308,17 +310,17 @@ export const FOOTER_DATA = [
       {
         name: "Instagram",
         icon: RxInstagramLogo,
-        link: "https://instagram.com",
-      },
-      {
-        name: "Twitter",
-        icon: RxTwitterLogo,
-        link: "https://x.com/_sanidhyy",
+        link: "https://www.instagram.com/ayush_xo._/",
       },
       {
         name: "Linkedin",
         icon: RxLinkedinLogo,
-        link: "https://linkedin.com",
+        link: "https://www.linkedin.com/in/ayush-singh-0915ap",
+      },
+      {
+        name: "GitHub",
+        icon: RxGithubLogo,
+        link: "https://github.com/Ayush-0915",
       },
     ],
   },
@@ -326,19 +328,14 @@ export const FOOTER_DATA = [
     title: "About",
     data: [
       {
-        name: "Become Sponsor",
-        icon: null,
-        link: "https://youtube.com",
-      },
-      {
-        name: "Learning about me",
-        icon: null,
-        link: "https://example.com",
-      },
-      {
         name: "Contact Me",
         icon: null,
-        link: "mailto:contact@example.com",
+        link: "mailto:ayushofficaluse@gmail.com",
+      },
+      {
+        name: "WhatsApp",
+        icon: FaWhatsapp,
+        link: "https://wa.me/919589981849?text=Hi%20Ayush%2C%20I%20visited%20your%20portfolio%20and%20want%20to%20connect.",
       },
     ],
   },
@@ -356,6 +353,10 @@ export const NAV_LINKS = [
   {
     title: "Projects",
     link: "#projects",
+  },
+  {
+    title: "My Work Experience",
+    link: "#experience",
   },
 ] as const;
 

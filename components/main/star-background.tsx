@@ -12,9 +12,19 @@ import type { Points as PointsType } from "three";
 
 export const StarBackground = (props: PointsInstancesProps) => {
   const ref = useRef<PointsType | null>(null);
-  const [sphere] = useState(() =>
-    random.inSphere(new Float32Array(5000), { radius: 1.2 }),
-  );
+  const [sphere] = useState(() => {
+    const positions = new Float32Array(5000 * 3);
+    random.inSphere(positions, { radius: 1.2 });
+    
+    // Validate and fix any NaN values
+    for (let i = 0; i < positions.length; i++) {
+      if (!isFinite(positions[i])) {
+        positions[i] = 0;
+      }
+    }
+    
+    return positions;
+  });
 
   useFrame((_state, delta) => {
     if (ref.current) {
@@ -28,7 +38,7 @@ export const StarBackground = (props: PointsInstancesProps) => {
       <Points
         ref={ref}
         stride={3}
-        positions={new Float32Array(sphere)}
+        positions={sphere}
         frustumCulled
         {...props}
       >
