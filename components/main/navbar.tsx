@@ -1,17 +1,46 @@
 'use client';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { LINKS, NAV_LINKS, SOCIALS } from "@/constants";
+import { NAV_LINKS, SOCIALS } from "@/constants";
 
 export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState("#about-me");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 120;
+
+      for (const item of NAV_LINKS) {
+        const sectionId = item.link.replace("#", "");
+        const section = document.getElementById(sectionId);
+
+        if (!section) {
+          continue;
+        }
+
+        const sectionTop = section.offsetTop;
+        const sectionBottom = sectionTop + section.offsetHeight;
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+          setActiveLink(item.link);
+          break;
+        }
+      }
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001427] backdrop-blur-md z-50 px-10">
+    <div className="fixed top-0 z-50 h-[65px] w-full bg-[#03001427] px-3 shadow-lg shadow-[#2A0E61]/50 backdrop-blur-md sm:px-6 lg:px-10">
       {/* Navbar Container */}
-      <div className="w-full h-full flex items-center justify-between m-auto px-[10px]">
+      <div className="m-auto flex h-full w-full max-w-7xl items-center justify-between px-1 sm:px-2">
         {/* Logo + Name */}
         <Link
           href="#about-me"
@@ -23,38 +52,38 @@ export const Navbar = () => {
             width={70}
             height={70}
             draggable={false}
-            className="cursor-pointer"
+            className="h-12 w-12 cursor-pointer object-contain sm:h-14 sm:w-14"
           />
-          <div className="hidden md:flex md:selffont-bold ml-[10px] text-gray-300">John Doe</div>
+          <div className="ml-2 hidden text-sm font-semibold text-gray-300 lg:flex">Ayush Singh</div>
         </Link>
 
         {/* Web Navbar */}
-        <div className="hidden md:flex w-[500px] h-full flex-row items-center justify-between md:mr-20">
-          <div className="flex items-center justify-between w-full h-auto border-[rgba(112,66,248,0.38)] bg-[rgba(3,0,20,0.37)] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.title}
-                href={link.link}
-                className="cursor-pointer hover:text-[rgb(112,66,248)] transition"
-              >
-                {link.title}
-              </Link>
-            ))}
+        <div className="hidden h-full flex-1 flex-row items-center justify-end md:flex md:pl-6 lg:pl-10">
+          <div className="flex h-auto w-full max-w-[780px] items-center justify-between rounded-full border border-[rgba(112,66,248,0.38)] bg-[rgba(3,0,20,0.37)] px-3 py-2 text-gray-200 lg:px-5">
+            {NAV_LINKS.map((link) => {
+              const isActive = activeLink === link.link;
 
-            {/* Source Code */}
-            <Link
-              href={LINKS.sourceCode}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="cursor-pointer hover:text-[rgb(112,66,248)] transition"
-            >
-              Source Code
-            </Link>
+              return (
+                <Link
+                  key={link.title}
+                  href={link.link}
+                  onClick={() => setActiveLink(link.link)}
+                  className={`whitespace-nowrap rounded-full border px-3 py-1.5 text-sm font-medium transition-all duration-300 ${
+                    isActive
+                      ? "border-cyan-400/70 bg-cyan-500/20 text-cyan-200 shadow-[0_0_20px_rgba(34,211,238,0.28)]"
+                      : "border-transparent text-gray-200 hover:border-violet-400/40 hover:bg-violet-500/15 hover:text-violet-200"
+                  }`}
+                >
+                  {link.title}
+                </Link>
+              );
+            })}
+
           </div>
         </div>
 
         {/* Social Icons (Web) */}
-        <div className="hidden md:flex flex-row gap-5">
+        <div className="hidden flex-row gap-4 pl-4 lg:flex">
           {SOCIALS.map(({ link, name, icon: Icon }) => (
             <Link
               href={link}
@@ -62,14 +91,14 @@ export const Navbar = () => {
               rel="noreferrer noopener"
               key={name}
             >
-              <Icon className="h-6 w-6 text-white" />
+              <Icon className="h-5 w-5 text-white transition-colors duration-200 hover:text-cyan-300" />
             </Link>
           ))}
         </div>
 
         {/* Hamburger Menu */}
         <button
-          className="md:hidden text-white focus:outline-none text-4xl"
+          className="text-3xl text-white focus:outline-none md:hidden"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           ☰
@@ -78,32 +107,34 @@ export const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-[65px] left-0 w-full bg-[#030014] p-5 flex flex-col items-center text-gray-300 md:hidden">
+        <div className="absolute left-0 top-[65px] w-full border-t border-white/10 bg-[#030014] p-5 text-gray-300 md:hidden">
           {/* Links */}
-          <div className="flex flex-col items-center gap-4">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.title}
-                href={link.link}
-                className="cursor-pointer hover:text-[rgb(112,66,248)] transition text-center"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {link.title}
-              </Link>
-            ))}
-            <Link
-              href={LINKS.sourceCode}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="cursor-pointer hover:text-[rgb(112,66,248)] transition text-center"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Source Code
-            </Link>
+          <div className="flex flex-col items-center gap-3">
+            {NAV_LINKS.map((link) => {
+              const isActive = activeLink === link.link;
+
+              return (
+                <Link
+                  key={link.title}
+                  href={link.link}
+                  className={`w-full max-w-xs rounded-full border px-4 py-2 text-center text-sm font-medium transition-all duration-300 ${
+                    isActive
+                      ? "border-cyan-400/70 bg-cyan-500/20 text-cyan-200"
+                      : "border-transparent text-gray-200 hover:border-violet-400/40 hover:bg-violet-500/15 hover:text-violet-200"
+                  }`}
+                  onClick={() => {
+                    setActiveLink(link.link);
+                    setIsMobileMenuOpen(false);
+                  }}
+                >
+                  {link.title}
+                </Link>
+              );
+            })}
           </div>
 
           {/* Social Icons */}
-          <div className="flex justify-center gap-6 mt-6">
+          <div className="mt-6 flex justify-center gap-6">
             {SOCIALS.map(({ link, name, icon: Icon }) => (
               <Link
                 href={link}

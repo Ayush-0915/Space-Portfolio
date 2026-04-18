@@ -66,3 +66,24 @@
 html {
   scroll-behavior: smooth;
 }
+
+.hero-orbit-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 62px 62px;
+}
+
+@keyframes orbit-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.orbit-float {
+  animation: orbit-float 4.8s ease-in-out infinite;
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="Windows logo">
+  <rect width="128" height="128" rx="24" fill="#0f172a"/>
+  <path fill="#00A4EF" d="M16 22 60 16v44H16z"/>
+  <path fill="#00A4EF" d="M68 15.2 112 9v51H68z"/>
+  <path fill="#00A4EF" d="M16 63h44v44l-44-6z"/>
+  <path fill="#00A4EF" d="M68 63h44v56l-44-6z"/>
+</svg>

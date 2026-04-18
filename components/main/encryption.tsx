@@ -7,11 +7,11 @@ import { slideInFromTop } from "@/lib/motion";
 
 export const Encryption = () => {
   return (
-    <div className="flex flex-row relative items-center justify-center min-h-screen w-full h-full -z-20">
+    <div className="relative flex h-full min-h-[70vh] w-full flex-row items-center justify-center overflow-hidden px-4 py-12 sm:min-h-[80vh] sm:py-16 md:min-h-screen -z-20">
       <div className="absolute w-auto h-auto top-0 z-[5]">
         <motion.div
           variants={slideInFromTop}
-          className="text-[40px] font-medium text-center text-gray-200"
+          className="px-2 text-center text-3xl font-medium text-gray-200 sm:text-4xl"
         >
           Performance{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
@@ -44,8 +44,8 @@ export const Encryption = () => {
         </div>
       </div>
 
-      <div className="absolute z-[20] bottom-[10px] px-[5px]">
-        <div className="cursive text-[20px] font-medium text-center text-gray-300">
+      <div className="absolute bottom-[10px] z-[20] px-[5px]">
+        <div className="cursive px-2 text-center text-base font-medium text-gray-300 sm:text-xl">
           Secure your data with end-to-end encryption.
         </div>
       </div>
@@ -57,7 +57,7 @@ export const Encryption = () => {
           autoPlay
           playsInline
           preload="false"
-          className="w-full h-auto"
+          className="h-auto w-full"
         >
           <source src="/videos/encryption-bg.webm" type="video/webm" />
         </video>

@@ -5,21 +5,26 @@ import {
   BACKEND_SKILL,
   FRONTEND_SKILL,
   FULLSTACK_SKILL,
-  OTHER_SKILL,
   SKILL_DATA,
 } from "@/constants";
 
 export const Skills = () => {
+  const allSkills = [
+    ...SKILL_DATA,
+    ...FRONTEND_SKILL,
+    ...BACKEND_SKILL,
+    ...FULLSTACK_SKILL,
+  ] as const;
+
   return (
     <section
       id="skills"
-      style={{ transform: "scale(0.9)" }}
-      className="flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden py-20"
+      className="relative flex h-full flex-col items-center justify-center gap-8 overflow-hidden px-4 py-16 sm:px-6 md:px-10 md:py-20"
     >
       <SkillText />
 
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {SKILL_DATA.map((skill, i) => (
+      <div className="relative z-10 flex w-full max-w-6xl flex-wrap items-center justify-center gap-4 rounded-2xl border border-[#6f5cff30] bg-transparent p-6 md:gap-5 md:p-8">
+        {allSkills.map((skill, i) => (
           <SkillDataProvider
             key={skill.skill_name}
             src={skill.image}
@@ -31,59 +36,10 @@ export const Skills = () => {
         ))}
       </div>
 
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {FRONTEND_SKILL.map((skill, i) => (
-          <SkillDataProvider
-            key={skill.skill_name}
-            src={skill.image}
-            name={skill.skill_name}
-            width={skill.width}
-            height={skill.height}
-            index={i}
-          />
-        ))}
-      </div>
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {BACKEND_SKILL.map((skill, i) => (
-          <SkillDataProvider
-            key={skill.skill_name}
-            src={skill.image}
-            name={skill.skill_name}
-            width={skill.width}
-            height={skill.height}
-            index={i}
-          />
-        ))}
-      </div>
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {FULLSTACK_SKILL.map((skill, i) => (
-          <SkillDataProvider
-            key={skill.skill_name}
-            src={skill.image}
-            name={skill.skill_name}
-            width={skill.width}
-            height={skill.height}
-            index={i}
-          />
-        ))}
-      </div>
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {OTHER_SKILL.map((skill, i) => (
-          <SkillDataProvider
-            key={skill.skill_name}
-            src={skill.image}
-            name={skill.skill_name}
-            width={skill.width}
-            height={skill.height}
-            index={i}
-          />
-        ))}
-      </div>
-
-      <div className="w-full h-full absolute">
-        <div className="w-full h-full z-[-10] opacity-30 absolute flex items-center justify-center bg-cover">
+      <div className="absolute h-full w-full">
+        <div className="absolute z-[-10] flex h-full w-full items-center justify-center bg-cover opacity-25">
           <video
-            className="w-full h-auto"
+            className="h-full w-full object-cover"
             preload="false"
             playsInline
             loop
