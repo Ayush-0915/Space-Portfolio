@@ -358,6 +358,10 @@ export const NAV_LINKS = [
     title: "My Work Experience",
     link: "#experience",
   },
+  {
+    title: "Certificates",
+    link: "#certificates",
+  },
 ] as const;
 
 export const LINKS = {
