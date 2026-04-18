@@ -72,11 +72,11 @@ export const Certificates = () => {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         viewport={{ once: true, amount: 0.35 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="relative mx-auto w-full max-w-6xl px-5 py-20 md:px-8"
+        className="relative mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 sm:py-18 md:px-8 md:py-20"
       >
-        <h2 className="mb-10 text-2xl font-semibold text-white sm:text-3xl md:mb-14 md:text-4xl">My Certificates</h2>
+        <h2 className="mb-8 text-2xl font-semibold text-white sm:mb-10 sm:text-3xl md:mb-14 md:text-4xl">My Certificates</h2>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 sm:gap-5 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
           {CERTIFICATES.map((certificate, index) => (
             <motion.button
               key={certificate.title}
@@ -86,9 +86,9 @@ export const Certificates = () => {
               transition={{ duration: 0.45, delay: index * 0.08 }}
               viewport={{ once: true, amount: 0.25 }}
               onClick={() => setActiveCertificate(certificate)}
-              className="flex h-full flex-col rounded-2xl border border-violet-400/25 bg-[rgba(10,15,36,0.75)] p-5 text-left shadow-[0_0_24px_rgba(76,29,149,0.2)] backdrop-blur-sm transition hover:border-cyan-300/60"
+              className="flex h-full flex-col rounded-2xl border border-violet-400/25 bg-[rgba(10,15,36,0.75)] p-4 text-left shadow-[0_0_24px_rgba(76,29,149,0.2)] backdrop-blur-sm transition hover:border-cyan-300/60 sm:p-5"
             >
-              <div className="relative mb-4 h-56 overflow-hidden rounded-lg border border-white/10 bg-[#0b122f] p-2">
+              <div className="relative mb-4 h-44 overflow-hidden rounded-lg border border-white/10 bg-[#0b122f] p-2 sm:h-52 md:h-48 lg:h-56">
                 <Image
                   src={certificate.image}
                   alt={`${certificate.title} certificate preview`}
@@ -97,9 +97,9 @@ export const Certificates = () => {
                 />
               </div>
               <p className="text-sm font-semibold uppercase tracking-widest text-cyan-300/90">{certificate.period}</p>
-              <h3 className="mt-2 text-xl font-semibold leading-tight text-gray-100">{certificate.title}</h3>
-              <p className="mt-2 text-sm font-medium text-violet-200">{certificate.issuer}</p>
-              <p className="mt-4 text-sm leading-relaxed text-gray-300">{certificate.details}</p>
+              <h3 className="mt-2 text-lg font-semibold leading-tight text-gray-100 sm:text-xl">{certificate.title}</h3>
+              <p className="mt-2 text-sm font-medium text-violet-200 sm:text-[0.95rem]">{certificate.issuer}</p>
+              <p className="mt-3 text-sm leading-relaxed text-gray-300 sm:mt-4">{certificate.details}</p>
             </motion.button>
           ))}
         </div>
@@ -107,19 +107,19 @@ export const Certificates = () => {
 
       {activeCertificate && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/85 p-4"
+          className="fixed inset-0 z-[100] flex items-start justify-center overflow-y-auto bg-black/85 p-3 sm:items-center sm:p-4"
           onClick={() => setActiveCertificate(null)}
         >
           <button
             type="button"
             onClick={() => setActiveCertificate(null)}
-            className="absolute right-4 top-4 rounded-full border border-white/40 px-3 py-1 text-sm font-semibold text-white hover:border-cyan-300 hover:text-cyan-300"
+            className="absolute right-3 top-3 z-10 rounded-full border border-white/40 bg-black/45 px-3 py-1 text-sm font-semibold text-white hover:border-cyan-300 hover:text-cyan-300 sm:right-4 sm:top-4"
           >
             Close
           </button>
 
           <div
-            className="relative max-h-[90vh] max-w-5xl overflow-auto rounded-xl border border-white/20 bg-[#050816] p-2"
+            className="relative mt-12 w-full max-w-sm overflow-auto rounded-xl border border-white/20 bg-[#050816] p-1.5 sm:mt-0 sm:max-h-[90vh] sm:max-w-3xl sm:p-2 lg:max-w-5xl"
             onClick={(event) => event.stopPropagation()}
           >
             <Image
