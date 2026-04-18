@@ -3,8 +3,10 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import awsCertificate from "@/app/AWS.jpeg";
 import genAiCertificate from "@/app/Gen AI.png";
 import microsoftCertificate from "@/app/Microsoft.png";
+import oracleDatabaseCertificate from "@/app/Oracle database .jpeg";
 import oracleCertificate from "@/app/Oracle Certificate.jpg";
 import virtualInternshipCertificate from "@/app/Virtual Internship Certificate.jpg";
 
@@ -40,6 +42,22 @@ const CERTIFICATES = [
     details:
       "Completed Google Cloud Generative AI learning track with hands-on understanding of foundation models, prompt design, and applied Gen AI workflows.",
     image: genAiCertificate,
+  },
+  {
+    title: "AWS ML Foundation",
+    issuer: "AWS",
+    period: "2025",
+    details:
+      "Completed AWS Machine Learning Foundation training covering core ML concepts, AWS ML services, and practical cloud-based model workflows.",
+    image: awsCertificate,
+  },
+  {
+    title: "Database Foundation Oracle Certificate",
+    issuer: "Oracle",
+    period: "2025",
+    details:
+      "Completed Oracle Database Foundation certification focused on relational database concepts, SQL fundamentals, and practical data management skills.",
+    image: oracleDatabaseCertificate,
   },
 ] as const;
 
