@@ -48,12 +48,18 @@ Here is the folder structure of this app.
 space-portfolio/
   |- app/
     |-- apple-icon.png
+    |-- Ayushhh.pdf
+    |-- Car Evaluation.png
     |-- favicon.ico
     |-- globals.css
     |-- icon1.png
     |-- icon2.png
+    |-- image.png
     |-- layout.tsx
+    |-- Netflix Data Analysis.png
     |-- page.tsx
+    |-- Shifra.jpg
+    |-- uber.jpg
   |- components/
     |-- main/
     |-- sub/
