@@ -30,7 +30,7 @@ export const About = () => {
         className="max-w-[820px] text-center text-base leading-relaxed text-gray-300 sm:text-lg"
       >
         <p className="mb-[15px]">
-          I&apos;m an <span className="text-cyan-400 font-semibold">Aspiring Machine Learning Engineer</span> with a strong interest in <span className="text-purple-400 font-semibold">AI-driven solutions</span>.
+          I&apos;m an <span className="text-cyan-400 font-semibold">Enthusiastic Machine Learning Engineer</span> with a strong interest in <span className="text-purple-400 font-semibold">AI-driven solutions</span>.
         </p>
         
         <p>
