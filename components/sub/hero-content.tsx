@@ -56,7 +56,7 @@ export const HeroContent = () => {
           variants={slideInFromLeft(0.8)}
           className="my-4 max-w-[640px] text-base text-gray-400 sm:my-5 sm:text-lg"
         >
-          Hello, I&apos;m Ayush Singh, an aspiring AI/ML Engineer actively
+          Hello, I&apos;m Ayush Singh, an Enthusiastic AI/ML Engineer actively
           seeking opportunities in machine learning, deep learning, and data
           science. Explore my projects, skills, and resume.
         </motion.p>
