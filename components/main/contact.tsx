@@ -27,16 +27,19 @@ export const ContactMe = () => {
     setIsSubmitting(true);
 
     try {
-      // You can replace this with your actual email service
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
+      const result = await response.json();
+
       if (response.ok) {
         setFormData({ fullName: "", email: "", message: "" });
         alert("Message sent successfully! I'll get back to you soon.");
+      } else {
+        alert(result?.message ?? "Failed to send message. Please try again.");
       }
     } catch (error) {
       console.error("Error sending message:", error);
