@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { SparklesIcon } from "@heroicons/react/24/solid";
 import awsCertificate from "@/app/AWS.jpeg";
 import genAiCertificate from "@/app/Gen AI.png";
 import microsoftCertificate from "@/app/Microsoft.png";
@@ -74,7 +75,10 @@ export const Certificates = () => {
         transition={{ duration: 0.7, ease: "easeOut" }}
         className="relative mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 sm:py-18 md:px-8 md:py-20"
       >
-        <h2 className="mb-8 text-2xl font-semibold text-white sm:mb-10 sm:text-3xl md:mb-14 md:text-4xl">My Certificates</h2>
+        <div className="Welcome-box mx-auto mb-8 border border-[#7042f88b] px-[7px] py-[8px] opacity-[0.9] sm:mb-10 md:mb-14">
+          <SparklesIcon className="mr-[10px] h-5 w-5 text-[#b49bff]" />
+          <h2 className="Welcome-text text-[13px]">My Certificates</h2>
+        </div>
 
         <div className="grid grid-cols-1 gap-4 sm:gap-5 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
           {CERTIFICATES.map((certificate, index) => (

@@ -74,7 +74,7 @@ export const ContactMe = () => {
           variants={slideInFromLeft(0.6)}
           className="text-gray-400 mb-[30px] leading-relaxed"
         >
-          Whether you're looking to collaborate on an ML project, discuss AI solutions, or just want to chat about data science, I'm here to help!
+          Whether you&apos;re looking to collaborate on an ML project, discuss AI solutions, or just want to chat about data science, I&apos;m here to help!
         </motion.p>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-6">

@@ -355,7 +355,7 @@ export const NAV_LINKS = [
     link: "#projects",
   },
   {
-    title: "My Work Experience",
+    title: "Experience",
     link: "#experience",
   },
   {
