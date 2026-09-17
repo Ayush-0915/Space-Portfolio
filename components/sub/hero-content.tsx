@@ -14,12 +14,12 @@ const orbitIcons = [
   { src: "/skills/python.svg", alt: "Python", pos: "top-[12%] left-[10%]" },
   { src: "/skills/tensorflow.svg", alt: "TensorFlow", pos: "top-[20%] left-[50%]" },
   { src: "/skills/pytorch.svg", alt: "PyTorch", pos: "top-[38%] left-[22%]" },
-  { src: "/skills/openai.svg", alt: "OpenAI", pos: "top-[44%] left-[62%]" },
   { src: "/skills/scikitlearn.svg", alt: "Scikit-learn", pos: "top-[61%] left-[38%]" },
   { src: "/skills/huggingface.svg", alt: "Hugging Face", pos: "top-[57%] left-[74%]" },
   { src: "/skills/jupyter.svg", alt: "Jupyter", pos: "top-[77%] left-[20%]" },
-  { src: "/skills/kaggle.svg", alt: "Kaggle", pos: "top-[80%] left-[56%]" },
-  { src: "/skills/mlflow.svg", alt: "MLflow", pos: "top-[30%] left-[80%]" },
+  { src: "/skills/numpy.svg", alt: "NumPy", pos: "top-[12%] left-[78%]" },
+  { src: "/skills/pandas.svg", alt: "Pandas", pos: "top-[72%] left-[58%]" },
+  { src: "/skills/matplotlib.svg", alt: "Matplotlib", pos: "top-[42%] left-[50%]" },
 ] as const;
 
 export const HeroContent = () => {

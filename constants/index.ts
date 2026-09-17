@@ -43,12 +43,6 @@ export const SKILL_DATA = [
     height: 80,
   },
   {
-    skill_name: "OpenCV",
-    image: "opencv.svg",
-    width: 80,
-    height: 80,
-  },
-  {
     skill_name: "Jupyter",
     image: "jupyter.svg",
     width: 80,
@@ -57,30 +51,6 @@ export const SKILL_DATA = [
   {
     skill_name: "Hugging Face",
     image: "huggingface.svg",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "OpenAI",
-    image: "openai.svg",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "LangChain",
-    image: "langchain.svg",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Keras",
-    image: "keras.svg",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "MLflow",
-    image: "mlflow.svg",
     width: 80,
     height: 80,
   },
@@ -123,12 +93,6 @@ export const FRONTEND_SKILL = [
     height: 80,
   },
   {
-    skill_name: "Plotly",
-    image: "plotly.svg",
-    width: 80,
-    height: 80,
-  },
-  {
     skill_name: "Streamlit",
     image: "streamlit.svg",
     width: 80,
@@ -140,60 +104,12 @@ export const FRONTEND_SKILL = [
     width: 80,
     height: 80,
   },
-  {
-    skill_name: "Gradio",
-    image: "gradio.svg",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Weights & Biases",
-    image: "wandb.svg",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Kaggle",
-    image: "kaggle.svg",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Apache Spark",
-    image: "spark.svg",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "DuckDB",
-    image: "duckdb.svg",
-    width: 80,
-    height: 80,
-  },
 ] as const;
 
 export const BACKEND_SKILL = [
   {
     skill_name: "Docker",
     image: "docker.svg",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Kubernetes",
-    image: "kubernetes.svg",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "GitHub Actions",
-    image: "githubactions.svg",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Apache Airflow",
-    image: "airflow.svg",
     width: 80,
     height: 80,
   },
@@ -215,25 +131,6 @@ export const FULLSTACK_SKILL = [
   {
     skill_name: "Google Cloud",
     image: "gcp.svg",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Mac",
-    image: "apple.svg",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Windows",
-    image: "windows.svg",
-    width: 80,
-    height: 80,
-  },
-
-  {
-    skill_name: "Git",
-    image: "git.svg",
     width: 80,
     height: 80,
   },
